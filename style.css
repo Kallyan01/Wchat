@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+.desktop
+{
+    height: 90vh;
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+.navbar
+{
+    display: none;
+}
+.container
+{
+    display: none;
+}
+@media screen and (max-width:760px)
+{
+    *
+    {
+        overflow-x: hidden;
+        
+    }
+    .navbar
+{
+    display: block;
+}
+.inchat
+{
+    display: none;
+    background: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: url(Whatsapp-Wallpaper-120.jpg) no-repeat;
+    background-size: contain;
+    z-index: 20000;
+}
+.chatnav
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 5px;
+    background: #075E54;
+    color: #fff;
+    justify-content: space-between;
+}
+.chatnav .left
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+
+.active::before
+{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(255, 255, 255);
+    height: 3px;
+    width: 100%;
+    
+}
+.txtmsgs
+{
+    color: #fff;
+    margin: 65px 0 ;
+}
+.chatnav .left img
+{
+border-radius: 50%;
+height: 40px;
+width: 40px;
+margin-right: 15px;
+}
+.chatnav .left h2
+{
+    font-size: 20px;
+    transform: translateX(-20px);
+}
+.chatnav .right
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 35%;
+}
+.chat-section
+{
+    /* background: orangered; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chat-box
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 25px;
+    background: #fff;
+    box-shadow: 0px 1px 2px 0px black;
+}
+.chat-section i
+{
+    margin: 0 5px;
+    padding: 0 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.chat-box input
+{
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background: transparent;
+}
+.voice-btn
+{
+    box-shadow: 0px 1px 2px 0px black;
+    padding: 15px 13px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+    .desktop
+    {
+        display: none;
+    }
+    body
+    {
+        overflow-x: hidden;
+        
+    }
+    /* .hide
+    {
+        display: none;
+    } */
+    .navbar
+    {
+        
+        position: relative;
+    }
+    .navbar nav
+    {
+        width: 100vw;
+        background-color:#075E54;
+        color: white;
+        height: auto;
+        font-family: 'Work Sans', sans-serif;
+        height:20vh;
+        z-index: 10;
+        position: fixed;
+        top: 0;
+    }
+    .navbar h2
+    {
+        position: relative;
+        margin: 15px ;
+        font-size: 20px;
+    }
+    .navbar .menu ul
+    {
+        
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 0 0 0;
+    }
+    .navbar .menu
+    {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        
+    }
+    
+    .navbar .menu li:active
+    {
+     opacity: 100%;
+    }
+    .navbar .menu li
+    {
+        position: relative;
+        display: block;
+        list-style: none;
+        margin-right: 50px;
+        padding: 20px 0;
+    }
+    .navbar .menu li a 
+    {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Work Sans', sans-serif;
+    opacity: 80%;
+    
+    }
+    .navbar .menu li:nth-child(1)
+    {
+    margin-left:-20px ;
+    
+    }
+    .navbar .sbar
+    {
+        margin: 10px;
+        float: right;
+        margin-top: 15px;
+    }
+    .navbar .sbar li
+    {
+    list-style: none;
+    display: inline-block;
+    margin-left: 25px;
+    float: left;
+    }
+    .navbar .sbar li i
+    {
+        font-size: 20px;
+        position: relative;
+
+    }
+    .container
+    {
+        display:flex;
+        width: 300%;
+        height: auto;
+        margin-top: 20vh;
+        font-family: 'PT Sans', sans-serif;
+    }
+    .chat
+    { 
+        
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+    .chat .profile 
+    {
+        display: flex;
+        position: relative;
+        padding: 5px;
+        margin: 15px 0;
+        cursor: pointer;
+    }
+    .chat .profile::after
+    {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: .5px;
+        width: 80%;
+        background: rgb(163, 162, 162);
+
+    }
+    .profile img
+    {
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+        margin: 0 10px 0 0;
+    }
+    .chat-details
+    {
+        width: 100%;
+        margin: -10px 0 0 3px;
+        position: relative;
+    }
+    .chat-details h2
+    {
+        font-size: 20px;
+        margin: 10px 6px 0 6px;
+    }
+    .chat-details p
+    {
+        margin: 8px;
+    }
+    .chat-details time
+    {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+    .status
+    {
+         
+        width: 100%;
+        height: auto;
+       
+    }
+    .calls
+    {
+        
+      
+        width: 100%;
+        height: auto;
+       
+    }
+}
+    
+    
+    
+   
