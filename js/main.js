@@ -34,3 +34,9 @@ for (var i = 0; i < btns.length; i++) {
 
   });
 }
+var loadend= document.querySelector('.loadscreen')
+function loaden()
+{
+    console.log('ended');
+loadend.style="display:none;";
+}

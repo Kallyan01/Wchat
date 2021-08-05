@@ -6,6 +6,52 @@ body
     box-sizing: border-box;
    
 }
+.loadscreen
+{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 20;
+    width: 100%;
+    overflow: hidden;
+    color: #31C068;
+}
+.load-icon
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.load-icon img
+{
+    height: 100px;
+    width: 100px;
+}
+.load-txt
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.load-txt p
+{
+    margin-bottom: -13px;
+}
+.load-txt h2
+{
+    text-transform: uppercase;
+}
 .desktop
 {
     height: 90vh;
@@ -40,7 +86,7 @@ body
     left: 0;
     height: 100vh;
     width: 100vw;
-    background: url(images/wap-bag2.jpg) no-repeat;
+    background: url(images/bag1.webp) no-repeat;
     background-size:cover;
     z-index: 20000;
 }
@@ -118,6 +164,8 @@ margin-right: 15px;
     justify-content: space-evenly;
     align-items: center;
     padding: 5px 10px;
+    height: 70px;
+    width: 87%;
     border-radius: 25px;
     background: #fff;
     box-shadow: 0px 1px 2px 0px black;
@@ -140,9 +188,16 @@ margin-right: 15px;
 .voice-btn
 {
     box-shadow: 0px 1px 2px 0px black;
-    padding: 15px 13px;
-    border-radius: 50%;
+    height: 70px;
+    padding: 5px;
+    width: 70px;
     background: #fff;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
 }
 
     .desktop
@@ -183,9 +238,8 @@ margin-right: 15px;
     }
     .navbar .menu ul
     {
-        
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         margin: 0 0 0 0;
     }
     .navbar .menu
@@ -201,12 +255,13 @@ margin-right: 15px;
     {
      opacity: 100%;
     }
+    
     .navbar .menu li
     {
         position: relative;
         display: block;
         list-style: none;
-        margin-right: 50px;
+        margin-right: 15px;
         padding: 20px 0;
     }
     .navbar .menu li a 
@@ -316,13 +371,38 @@ margin-right: 15px;
         height: auto;
        
     }
+    .addstatus
+    {
+        display: flex;
+        position: relative;
+        padding: 20px 10px;
+    }
+    .addstatus::after
+    {
+        position: absolute;
+        content: 'Recent Updates';
+        bottom: 0;
+        left: 5px;
+        color: rgb(119, 115, 115);
+        font-weight: 700;
+    }
+    .addstatus img
+    {
+        height: 50px;
+        width: 50px;
+        margin:0 15px 0 0  ;
+        border-radius: 50%;
+        border: 5px solid rgb(168, 168, 168);
+    }
+    .stus time 
+    {
+    top: 10px;
+    font-size: 30px;
+    }
 }
 @media screen and (max-width:670px)
 {
-.menu i,a
-{
-    font-size: 13px;
-}
+
 .profile img
     {
        
@@ -330,6 +410,41 @@ margin-right: 15px;
         width: 50px;
        
     }
+    
+}
+@media screen and (max-width:570px)
+{
+    .chat-box
+    {
+        height: 40px;
+        width: 90%;
+    }
+.voice-btn
+{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+.chat-section i
+{
+    margin: 0 5px;
+    padding: 0 5px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.chat-box input
+{
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background: transparent;
+}
     
 }
     
