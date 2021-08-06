@@ -67,6 +67,29 @@ body
 {
     display: none;
 }
+.cmngsoon
+{
+    background: #d62424;
+    height: 50px;
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translate(-50%,-50%);
+    z-index: 500;
+    border-radius: 10px;
+    color: #fff;
+}
+.cmngsoon p
+{
+    font-weight: 700;
+    font-size: 24px;
+}
+
 @media screen and (max-width:760px)
 {
     *
@@ -88,7 +111,7 @@ body
     width: 100vw;
     background: url(images/bag1.webp) no-repeat;
     background-size:cover;
-    z-index: 20000;
+    z-index: 200;
 }
 .chatnav
 {

@@ -17,6 +17,9 @@
     <div class="desktop">
         <h1>COMING SOON</h1>
     </div>
+    <div class="cmngsoon" id="cmngsoon">
+        <p>Comming Soon!  </p>
+    </div>
     <div class="loadscreen">
         <div class="load-icon">
              <img src="images/WhatsApp.png" alt="">
@@ -35,10 +38,10 @@
             <h2>WhatsApp Chat</h2>
             <div class="menu">
                 <ul id="tabwrap">
-                    <li><i class="fa fa-camera" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-camera" aria-hidden="true" onclick="warning()"></i></li>
                     <li><a href="#" id="chat" class="tablnk active">chats</a></li>
                     <li><a href="#" id="status" class="tablnk">status</a></li>
-                    <li><a href="#" id="calls" class="tablnk">calls</a></li>
+                    <li><a href="#" id="calls" class="tablnk" onclick="warning()">calls</a></li>
                 </ul>
             </div>
         </nav>
@@ -123,7 +126,7 @@
                 <i class="fa fa-camera" aria-hidden="true"></i>
                 <i class="fas fa-paperclip"></i>
             </div>
-            <div class="voice-btn send-btn">
+            <div class="voice-btn send-btn" onclick="warning()">
                 <i class="fas fa-microphone"></i>
             </div>
         </div>
