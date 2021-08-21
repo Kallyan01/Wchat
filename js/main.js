@@ -51,3 +51,21 @@ trgr.style="opacity:1;transition:all .8s ease-in-out";
 setTimeout(warningclose,1000);
 }
 
+let dotbtn=document.getElementById("dotbtn");
+let dotmenu=document.getElementById("dotmenu");
+let body=document.querySelector("body");
+var menu_val = window.getComputedStyle(dotmenu)
+dotbtn.addEventListener("click",()=>
+{
+dotmenu.style="height: 250px !important;width: 150px !important;opacity:1 !important;"
+})
+body.addEventListener("click",()=>
+{
+if(menu_val.height=="250px")
+{
+    dotmenu.style="height: 0px !important;width: 0px !important;opacity:0 !important;"
+}
+})
+
+
+
