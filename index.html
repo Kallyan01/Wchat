@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="style.css">
     <title>WhatsApp</title>
+    <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script defer src="js/client.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -126,22 +128,25 @@
                 <i class="fas fa-ellipsis-v"></i>
             </div>
         </div>
-        <div class="txtmsgs">
-            
+        <div class="txtmsgs" id="txtmsg">
+            <div class="messages right">kallyan</div>
+            <div class="messages left"></div>            
         </div>
         <div class="chat-section">
             <div class="chat-box">
                 <i class="far fa-grin"></i>
-                <input type="text" name="chatbox" id="chatbox" onfocus="warning()" placeholder="Type a message">
+                <input type="text" name="chatbox" id="chatbox" onfocus="sendbtn()" placeholder="Type a message">
                 <i class="fa fa-camera" aria-hidden="true"></i>
                 <i class="fas fa-paperclip"></i>
             </div>
-            <div class="voice-btn send-btn" oninput="warning()">
-                <i class="fas fa-microphone"></i>
+            <div type="submit" class="voice-btn send-btn" id="sendbtn">
+                <i class="fas fa-microphone" id="msgbtn"></i>
             </div>
         </div>
     </div>
 </body>
 <script src="js/main.js"></script>
+
+
 
 </html>

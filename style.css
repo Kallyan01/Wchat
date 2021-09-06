@@ -113,6 +113,44 @@ body
     background-size:cover;
     z-index: 200;
 }
+.messages
+{
+   
+    background: #fff;
+    margin: 10px 25px 0 10px;
+    height:auto;
+    min-width: 60px ;
+    max-width: 50% ;
+    color: #000;
+    padding: 10px;
+    position: relative;
+    border-radius: 10px;
+    transform: all 0.8s ease-in-out;
+}
+.messages.left
+{
+    float: left;
+    clear: both;
+    
+}
+/* .messages.left::before
+{
+    position: absolute;
+    content: '';
+    background: #c04231;
+    height: 40px;
+    width: 40px;
+    top: 80%;
+    left: 50%;
+    z-index: 10000;
+    margin-left: -10px;
+    border-radius: 0 50% 50% 50%;
+} */
+.messages.right
+{
+    float: right;
+    clear: both;
+}
 .chatnav
 {
     position: fixed;
@@ -172,8 +210,14 @@ ul.dotmenu
 }
 .txtmsgs
 {
-    color: #fff;
-    margin: 65px 0 ;
+    
+    position: relative;
+   
+    height: 90vh;
+    width: inherit;
+    overflow-y: auto;
+    z-index: -1;
+    padding: 100px 0;
 }
 .chatnav .left img
 {
