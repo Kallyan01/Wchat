@@ -117,14 +117,15 @@ body
 {
    
     background: #fff;
-    margin: 10px 25px 0 10px;
+    margin: 10px 25px 10px 10px;
     height:auto;
     min-width: 60px ;
     max-width: 50% ;
     color: #000;
-    padding: 10px;
+    font-family: 'PT Sans', sans-serif;
+    padding: 13px;
     position: relative;
-    border-radius: 10px;
+    border-radius: 6px;
     transform: all 0.8s ease-in-out;
 }
 .messages.left
@@ -132,6 +133,40 @@ body
     float: left;
     clear: both;
     
+}
+.messages .msgname
+{
+    font-size: 10px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 500;
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    color: gray;
+}
+.appearmsg
+{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    height: 20px;
+    width: 50%;
+    background: rgba(163, 119, 24, 0.897);
+    clear: both;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.messages .msgtime
+{
+    font-size: 10px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 500;
+    position: absolute;
+    bottom: 1px;
+    right: 4px;
+    color: gray;
 }
 /* .messages.left::before
 {
@@ -212,7 +247,8 @@ ul.dotmenu
 {
     
     position: relative;
-   
+   display: flex;
+   flex-direction: column;
     height: 90vh;
     width: inherit;
     overflow-y: auto;

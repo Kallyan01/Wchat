@@ -1,14 +1,29 @@
 let chat = document.getElementById('chat');
+let chatbox = document.getElementById('chatbox');
 let status = document.getElementById('status');
 let calls = document.getElementById('calls');
 let container = document.getElementById('cntnr');
 let backbtn = document.getElementById('goback');
 let chatin = document.getElementById('chatclk');
 let chatbtn = document.getElementById('msgbtn');
+
+chatbox.addEventListener('keyup', () => {
+    if (chatbox.value.length != 0) {
+        console.log("entered")
+        chatbtn.classList.remove('fa-microphone')
+        chatbtn.classList.add('fa-paper-plane')
+    }
+    else
+    {
+        console.log("entered")
+        chatbtn.classList.add('fa-microphone')
+        chatbtn.classList.remove('fa-paper-plane')
+    }
+})
 const sendbtn = () => {
-// console.log(document.getElementById('chatbox').value.length)
-chatbtn.classList.remove('fa-microphone')
-chatbtn.classList.add('fa-paper-plane')
+    // console.log(document.getElementById('chatbox').value.length)
+    chatbtn.classList.remove('fa-microphone')
+    chatbtn.classList.add('fa-paper-plane')
 
 }
 chat.addEventListener('click', function () {
