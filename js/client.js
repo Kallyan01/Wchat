@@ -18,17 +18,19 @@ const append = (name,message,position)=>{
 }
 
 const wlcmmsg=(name)=>{
-    const messageElement = document.createElement('div');
+    // const messageElement = document.createElement('div');
     const appearMsg = document.createElement('div');
     appearMsg.innerHTML=`${name} Joined The Chat`
     appearMsg.classList.add('appearmsg');
-    messageElement.append(appearMsg);
-    messageContainer.append(messageElement);
+    // messageElement.appendChild(appearMsg);
+    messageContainer.append(appearMsg);
 }
 sbtn.addEventListener('click',(e)=>{
     const message= messageInput.value;
+    if(message.length!=0){
     append(`You` ,`${message}`,'right');
     socket.emit('send',message);
+    }
     messageInput.value = '';
 })
 
@@ -41,5 +43,5 @@ socket.on('user-joined',name=>{
 wlcmmsg(name);
 })
 socket.on('receive',data=>{
-append(`${data.name}:`, `${data.message} `,"left")
+append(`${data.name}`, `${data.message} `,"left")
 })

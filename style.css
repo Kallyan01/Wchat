@@ -247,8 +247,8 @@ ul.dotmenu
 {
     
     position: relative;
-   display: flex;
-   flex-direction: column;
+   /* display: flex;
+   flex-direction: column; */
     height: 90vh;
     width: inherit;
     overflow-y: auto;
