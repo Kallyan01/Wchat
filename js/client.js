@@ -3,6 +3,8 @@ const socket = io('http://localhost:8000');
 const sbtn = document.getElementById('sendbtn');
 const messageInput = document.getElementById('chatbox')
 const messageContainer = document.getElementById('txtmsg')
+let inpbtn= document.getElementById('inpbtn');
+let inpname= document.getElementById('inpname');
 
 const append = (name,message,position)=>{
     const messageElement = document.createElement('div');
@@ -32,14 +34,22 @@ sbtn.addEventListener('click',(e)=>{
     messageInput.value = '';
 })
 
-const name = prompt("Enter Your Name:");
-console.log("working Hello")
-socket.emit('new-user-joined' , name);
+// const name = prompt("Enter Your Name:");
+inpbtn.addEventListener('click',nameinput)
+async function nameinput(){
+    
+    let name = inpname.value;
+    console.log(name)
+}
+const a= nameinput();
+a.then((name)=>{
+    socket.emit('new-user-joined' , name);
+     socket.on('user-joined',name=>{
+    // append(" ",`${name} Joined the chat`,"right")
+    wlcmmsg(name);
+    })
+     socket.on('receive',data=>{
+    append(`${data.name}:`, `${data.message} `,"left")
+    })
+})
 
-socket.on('user-joined',name=>{
-// append(" ",`${name} Joined the chat`,"right")
-wlcmmsg(name);
-})
-socket.on('receive',data=>{
-append(`${data.name}:`, `${data.message} `,"left")
-})
