@@ -35,11 +35,13 @@ sbtn.addEventListener('click',(e)=>{
 })
 
 // const name = prompt("Enter Your Name:");
+function givename(){
 inpbtn.addEventListener('click',nameinput)
 async function nameinput(){
     
     let name = inpname.value;
     console.log(name)
+}
 }
 const a= nameinput();
 a.then((name)=>{
