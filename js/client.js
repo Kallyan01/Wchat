@@ -5,6 +5,7 @@ const messageInput = document.getElementById('chatbox')
 const messageContainer = document.getElementById('txtmsg')
 let inpbtn = document.getElementById('inpbtn');
 let inpname = document.getElementById('inpname');
+let nameBox = document.getElementById('ncont');
 
 const append = (name, message, position) => {
     const messageElement = document.createElement('div');
@@ -35,22 +36,18 @@ sbtn.addEventListener('click', (e) => {
 })
 
 // const name = prompt("Enter Your Name:");
-async function givename() {
-    inpbtn.addEventListener('click', nameinput)
-    await function nameinput() {
-
-        let name = inpname.value;
-        console.log(name)
-        Promise.resolve()
-    }
+function nameinput() {
+    return inpname.value;
 }
-
-socket.emit('new-user-joined', name);
-socket.on('user-joined', name => {
-    // append(" ",`${name} Joined the chat`,"right")
-    wlcmmsg(name);
+console.log("hi")
+inpbtn.addEventListener('click', async () => {
+    nameBox.style="display:none;"
+    socket.emit('new-user-joined', await nameinput());
+    socket.on('user-joined', name => {
+        // append(" ",`${name} Joined the chat`,"right")
+        wlcmmsg(name);
+    })
+    socket.on('receive', data => {
+        append(`${data.name}:`, `${data.message} `, "left")
+    })
 })
-socket.on('receive', data => {
-    append(`${data.name}:`, `${data.message} `, "left")
-})
-

@@ -74,6 +74,7 @@ let dotbtn = document.getElementById("dotbtn");
 let dotmenu = document.getElementById("dotmenu");
 let body = document.querySelector("body");
 var menu_val = window.getComputedStyle(dotmenu)
+
 dotbtn.addEventListener("click", () => {
     dotmenu.style = "height: 250px !important;width: 150px !important;opacity:1 !important;"
 })
