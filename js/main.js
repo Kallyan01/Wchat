@@ -7,6 +7,7 @@ let backbtn = document.getElementById('goback');
 let chatin = document.getElementById('chatclk');
 let chatbtn = document.getElementById('msgbtn');
 
+
 chatbox.addEventListener('keyup', () => {
     if (chatbox.value.length != 0) {
         console.log("entered")
