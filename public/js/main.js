@@ -7,6 +7,7 @@ let backbtn = document.getElementById('goback');
 let chatin = document.getElementById('chatclk');
 let chatbtn = document.getElementById('msgbtn');
 
+
 chatbox.addEventListener('keyup', () => {
     if (chatbox.value.length != 0) {
         console.log("entered")
@@ -73,6 +74,7 @@ let dotbtn = document.getElementById("dotbtn");
 let dotmenu = document.getElementById("dotmenu");
 let body = document.querySelector("body");
 var menu_val = window.getComputedStyle(dotmenu)
+
 dotbtn.addEventListener("click", () => {
     dotmenu.style = "height: 250px !important;width: 150px !important;opacity:1 !important;"
 })
