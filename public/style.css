@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@800&display=swap');
 body
 {
     margin: 0;
@@ -55,10 +56,103 @@ body
 .desktop
 {
     height: 90vh;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    font-family: 'Cairo', sans-serif;
 }
+.desktop h1
+{
+    position: relative;
+    color: #fff;
+    font-size: 70px;
+    text-shadow:-1px 1px 18px #1eba12;
+    animation: txtsad 4s linear infinite alternate;
+}
+.desktop p
+{
+    color: rgb(173, 166, 166);
+}
+.desktop h1::after
+{
+position: absolute;
+content: '';
+top: 20px;
+left: 145px;
+height: 15px;
+width: 15px;
+position: absolute;
+background-color: #1eba12;
+border-radius: 50%;
+box-shadow:-1px 1px 18px #1eba12;
+animation: anim 3s linear infinite alternate;
+}
+.desktop h1::before
+{
+    position: absolute;
+    content: 'Hey,';
+    color: rgb(29, 207, 83);
+    font-size: 20px;
+    top: 130px;
+    left: 200px;
+}
+
+@keyframes anim
+{
+    0%
+    {
+        top: 25px;
+        height: 13.5px;
+width: 15px;
+    }
+    25%
+    {
+        height: 14px;
+        width: 15px;
+    }
+    50%
+    {
+        top: 5px;
+        height: 15px;
+        width: 15px;
+    }
+    75%{
+        height: 14px;
+        width: 15px;
+    }
+    100%
+    {
+        top: 25px;
+        height: 13.5px;
+width: 15px;
+    }
+}
+@keyframes txtsad
+{
+    
+    0%
+    {
+        text-shadow:0px -15px 18px #1eba12;
+    }
+    25%
+    {
+        text-shadow:0px -10px 18px #1eba12;
+    }
+    50%
+    {
+        text-shadow:0px 0px 18px #1eba12;
+    }
+    75%{
+        text-shadow:0px 10px 18px #1eba12;
+    }
+    100%
+    {
+        text-shadow:0px 15px 18px #1eba12;
+    }
+}
+
 .navbar
 {
     display: none;
