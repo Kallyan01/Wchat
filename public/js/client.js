@@ -30,9 +30,11 @@ const wlcmmsg = (name) => {
 }
 sbtn.addEventListener('click', (e) => {
     const message = messageInput.value;
+    if(message.length!=0){
     append(`You`, `${message}`, 'right');
     socket.emit('send', message);
     messageInput.value = '';
+    }
 })
 
 // const name = prompt("Enter Your Name:");
