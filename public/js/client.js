@@ -1,4 +1,4 @@
-const socket = io('http://localhost:8000');
+const socket = io();
 
 const sbtn = document.getElementById('sendbtn');
 const messageInput = document.getElementById('chatbox')
