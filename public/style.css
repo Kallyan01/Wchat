@@ -89,6 +89,32 @@ border-radius: 50%;
 box-shadow:-1px 1px 18px #1eba12;
 animation: anim 3s linear infinite alternate;
 }
+.desktop .bubble1
+{
+    position: absolute;
+    bottom: -250px;
+    left: -250px;
+    height: 500px;
+    z-index: -10;
+    opacity: 60%;
+    width: 500px;
+    background-color: #1eba12;
+    border-radius: 50%;
+    animation: bbl 5s 3s infinite alternate;
+}
+@keyframes bbl
+{
+    from
+    {
+        height: 500px;
+        width: 500px;
+    }
+    to
+    {
+        height: 1500px;
+        width: 1500px;
+    }
+}
 .desktop h1::before
 {
     position: absolute;
