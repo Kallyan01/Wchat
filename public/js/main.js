@@ -63,10 +63,10 @@ function loaden() {
 }
 var trgr = document.getElementById('cmngsoon');
 function warningclose() {
-    trgr.style = "opacity:0;transition:all .8s ease-in-out";
+    trgr.style = "display:none;opacity:0;transition:all .8s ease-in-out";
 }
 function warning() {
-    trgr.style = "opacity:1;transition:all .8s ease-in-out";
+    trgr.style = "display:flex;opacity:1;transition:all .8s ease-in-out";
     setTimeout(warningclose, 1000);
 }
 

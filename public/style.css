@@ -195,7 +195,7 @@ width: 15px;
     position: absolute;
     top: 50%;
     left: 50%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     opacity: 0;
@@ -203,6 +203,7 @@ width: 15px;
     z-index: 500;
     border-radius: 10px;
     color: #fff;
+    overflow: hidden;
 }
 .cmngsoon p
 {
@@ -413,22 +414,15 @@ ul.dotmenu
     box-shadow: -4px 3px 13px 0px grey;
     z-index: 100;
 }
-.inpname .name
-{
-    background-color: #d62424;
-    padding: 5px;
-    width: 100%;
-    display: grid;
-    place-items: center;
-}
+
 .inpname input
 {
     padding:  10px 0 !important;
     width: 300px !important;
-    /* border: none;
+    border: none;
     background-color: rgb(221, 217, 217);
     border-bottom:2px solid #1eba12;
-    outline: none; */
+    outline: none;
 }
 .inpname button
 {
