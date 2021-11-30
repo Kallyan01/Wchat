@@ -56,13 +56,23 @@ function nameinput() {
 }
 function nameErr()
 {
+    nameWar.innerHTML=`Please Enter Your Name !`;
+    nameWar.style="opacity:100% !important;"
+    setTimeout(() => {
+        nameWar.style="opacity:0% !important;"   
+    }, 2000);
+}
+
+function lengthErr()
+{
+    nameWar.innerHTML=`Please Enter A Name Below 20 Letter !`
     nameWar.style="opacity:100% !important;"
     setTimeout(() => {
         nameWar.style="opacity:0% !important;"   
     }, 2000);
 }
 inpbtn.addEventListener('click', async () => {
-    if (nameinput().length > 0) {
+    if (nameinput().length > 0 && nameinput().length<=20) {
         socket.emit('new-user-joined', await nameinput());
         nameBox.style = "display:none;"
         socket.on('user-joined', name => {
@@ -76,7 +86,10 @@ inpbtn.addEventListener('click', async () => {
     }
     else
     {
+        if(nameinput().length ==0)
         nameErr();
+        else
+        lengthErr();
     }
 })
 socket.on('leave', name => {
