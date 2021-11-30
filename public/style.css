@@ -418,11 +418,10 @@ ul.dotmenu
 {
     padding:  10px 0 !important;
     width: 300px !important;
-    outline: none;
-    border: none;
+    /* border: none;
     background-color: rgb(221, 217, 217);
     border-bottom:2px solid #1eba12;
-    outline: none;
+    outline: none; */
 }
 .inpname button
 {
@@ -778,7 +777,6 @@ margin-right: 15px;
 {
     padding: 10px ;
     width: 250px !important;
-    outline: none;
     font-size: 18px;
     
 }
