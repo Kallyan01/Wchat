@@ -413,7 +413,14 @@ ul.dotmenu
     box-shadow: -4px 3px 13px 0px grey;
     z-index: 100;
 }
-
+.inpname .name
+{
+    background-color: #d62424;
+    padding: 5px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
 .inpname input
 {
     padding:  10px 0 !important;
