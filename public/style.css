@@ -402,6 +402,7 @@ ul.dotmenu
     position: relative;
     border-radius: 10px;
     box-shadow: -4px 3px 13px 0px grey;
+    z-index: 100;
 }
 
 .inpname input
@@ -524,7 +525,11 @@ margin-right: 15px;
     .desktop
     {
         display: none !important;
-        opacity: -100 !important;
+        
+    }
+    .desktop h1
+    {
+        display: none;
     }
     body
     {
@@ -766,6 +771,7 @@ margin-right: 15px;
     outline: none;
     font-size: 18px;
     background: transparent;
+    
 }
 .inpname input
 {
@@ -773,6 +779,7 @@ margin-right: 15px;
     width: 250px !important;
     outline: none;
     font-size: 18px;
+    
 }
     
 }
