@@ -6,17 +6,28 @@ const messageContainer = document.getElementById('txtmsg')
 let inpbtn = document.getElementById('inpbtn');
 let inpname = document.getElementById('inpname');
 let nameBox = document.getElementById('ncont');
+let roomactiveTime = document.getElementById('chatTime')
 let nameWar = document.getElementById('warning');
 var sentAud = new Audio('sent-msg.mp3')
 var receiveAud = new Audio('incoming-msg.mp3')
-
+function getCurrTime(){
+    const date = new Date();
+    let hour = date.getHours();
+    let minutes = date.getMinutes();
+    let time = `${hour}:${minutes}`
+    return time ;
+}
 const append = (name, message, position) => {
     const messageElement = document.createElement('div');
     const messageName = document.createElement('div');
-    // const messageTime = document.createElement('div');
-    messageName.innerText = name;
-    messageElement.innerText = message;
-    messageName.classList.add('msgname');
+    const messageTime = document.createElement('div');
+    roomactiveTime.innerText= getCurrTime();
+    messageTime.classList.add('msgtime');
+     messageTime.innerText= getCurrTime();
+     messageName.innerText = name;
+     messageElement.innerText = message;
+     messageName.classList.add('msgname');
+     messageElement.appendChild(messageTime);
     messageElement.appendChild(messageName);
     messageElement.classList.add('messages');
     messageElement.classList.add(position);
