@@ -18,7 +18,7 @@ const staticPath = path.join(__dirname,"/public");
 app.use(express.static(staticPath));
 
 const server = app.listen(PORT,()=>{
-    console.log("Listining PORT 8000")
+    console.log("Listining PORT 8000 visit: http://localhost:8000")
 });
 const io = socketIO(server);
 

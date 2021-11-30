@@ -6,6 +6,7 @@ const messageContainer = document.getElementById('txtmsg')
 let inpbtn = document.getElementById('inpbtn');
 let inpname = document.getElementById('inpname');
 let nameBox = document.getElementById('ncont');
+let nameWar = document.getElementById('warning');
 
 const append = (name, message, position) => {
     const messageElement = document.createElement('div');
@@ -30,26 +31,40 @@ const wlcmmsg = (name) => {
 }
 sbtn.addEventListener('click', (e) => {
     const message = messageInput.value;
-    if(message.length!=0){
-    append(`You`, `${message}`, 'right');
-    socket.emit('send', message);
-    messageInput.value = '';
+    if (message.length != 0) {
+        append(`You`, `${message}`, 'right');
+        socket.emit('send', message);
+        messageInput.value = '';
     }
 })
 
 // const name = prompt("Enter Your Name:");
 function nameinput() {
-    return inpname.value;
+        return inpname.value;
+}
+function nameErr()
+{
+    nameWar.style="opacity:100% !important;"
+    setTimeout(() => {
+        nameWar.style="opacity:0% !important;"   
+    }, 2000);
 }
 console.log("hi")
 inpbtn.addEventListener('click', async () => {
-    nameBox.style="display:none;"
-    socket.emit('new-user-joined', await nameinput());
-    socket.on('user-joined', name => {
-        // append(" ",`${name} Joined the chat`,"right")
-        wlcmmsg(name);
-    })
-    socket.on('receive', data => {
-        append(`${data.name}:`, `${data.message} `, "left")
-    })
+    if (nameinput().length > 0) {
+        socket.emit('new-user-joined', await nameinput());
+        nameBox.style = "display:none;"
+        console.log(nameinput().length)
+        socket.on('user-joined', name => {
+            // append(" ",`${name} Joined the chat`,"right")
+            wlcmmsg(name);
+        })
+        socket.on('receive', data => {
+            append(`${data.name}:`, `${data.message} `, "left")
+        })
+    }
+    else
+    {
+        nameErr();
+    }
 })
