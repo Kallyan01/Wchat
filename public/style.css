@@ -231,6 +231,15 @@ width: 15px;
         color: red;
         transition: all .8s ease;
     }
+    .desktop
+    {
+        display: none !important;
+        
+    }
+    .desktop h1
+    {
+        display: none !important;
+    }
    
     .navbar
 {
@@ -522,15 +531,7 @@ margin-right: 15px;
     margin-left: 5px;
 }
 
-    .desktop
-    {
-        display: none !important;
-        
-    }
-    .desktop h1
-    {
-        display: none;
-    }
+    
     body
     {
         overflow-x: hidden;
