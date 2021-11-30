@@ -91,7 +91,7 @@ inpbtn.addEventListener('click', async () => {
             wlcmmsg(name);
         })
         socket.on('receive', data => {
-            append(`${data.name}:`, `${data.message} `, "left")
+            append(`${data.name}`, `${data.message} `, "left")
             receiveAud.play();
         })
     }
