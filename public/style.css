@@ -487,6 +487,7 @@ margin-right: 15px;
 .chat-section
 {
     /* background: orangered; */
+    overflow: hidden;
     position: fixed;
     bottom: 0;
     overflow: hidden;
@@ -517,6 +518,7 @@ margin-right: 15px;
     padding: 0 5px;
     font-size: 20px;
     cursor: pointer;
+    overflow: hidden;
 }
 .chat-box input
 {

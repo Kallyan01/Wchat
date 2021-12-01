@@ -56,7 +56,7 @@ sbtn.addEventListener('click', (e) => {
     if (message.length != 0) {
         append(`You`, `${message}`, 'right');
         socket.emit('send', message);
-        messageInput.value = '';
+        messageInput.value ='';
         sentAud.play();
     }
 })
